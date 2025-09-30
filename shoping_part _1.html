@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Fashion Store — Demo</title>
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    html,body{height:100%}
+    body{font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;line-height:1.4;background:linear-gradient(180deg,#fff 0%, #f7f8fb 100%);color:#111}
+    a{color:inherit}
+
+    .container{max-width:1100px;margin:32px auto;padding:24px}
+    header{display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,#ff9a9e,#fad0c4);display:flex;align-items:center;justify-content:center;font-weight:700;color:white;font-size:18px;box-shadow:0 6px 18px rgba(255,138,128,.12)}
+    h1{font-size:20px}
+    .tag{color:#6b7280;font-size:13px}
+
+    nav .btn{background:#111;color:#fff;padding:10px 14px;border-radius:10px;text-decoration:none;font-weight:600;box-shadow:0 8px 24px rgba(17,17,17,.08)}
+
+    main{margin-top:24px}
+
+    .gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
+    .card{background:#fff;border-radius:14px;padding:12px;box-shadow:0 6px 20px rgba(16,24,40,.04);text-align:center}
+    .thumb{width:100%;height:200px;border-radius:10px;background-size:cover;background-position:center;margin-bottom:12px}
+    .meta h3{font-size:16px;margin-bottom:6px}
+    .meta .price{font-weight:700;color:#111}
+    .meta .small{font-size:13px;color:#6b7280}
+
+    .panel{background:#fff;border-radius:14px;padding:16px;box-shadow:0 8px 28px rgba(15,23,42,.04);margin-top:24px}
+    .panel h2{font-size:16px;margin-bottom:12px}
+
+    table{width:100%;border-collapse:collapse}
+    th,td{padding:10px 8px;text-align:left;border-bottom:1px solid #f1f5f9;font-size:13px}
+    th{color:#374151;font-weight:700}
+
+    footer{margin-top:28px;padding:12px;text-align:center;color:#6b7280;font-size:13px}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">FS</div>
+        <div>
+          <h1>Fashion Store</h1>
+          <div class="tag">Modern apparel • Fast shipping • Secure payments</div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <h2 style="margin-bottom:12px">Featured Collections</h2>
+      <div class="gallery">
+        <div class="card">
+          <div class="thumb" style="background-image:url('https://images.unsplash.com/photo-1520975915629-1b378d4c2c49?auto=format&fit=crop&w=600&q=60')"></div>
+          <div class="meta">
+            <h3>Red Midi Dress</h3>
+            <div class="price">$49.99</div>
+            <div class="small">Perfect for summer evenings</div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="thumb" style="background-image:url('https://images.unsplash.com/photo-1530845644387-21e3f92d3e28?auto=format&fit=crop&w=600&q=60')"></div>
+          <div class="meta">
+            <h3>Classic White Tee</h3>
+            <div class="price">$19.99</div>
+            <div class="small">Everyday comfort & style</div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="thumb" style="background-image:url('https://images.unsplash.com/photo-1541099649105-f69ad21f3246?auto=format&fit=crop&w=600&q=60')"></div>
+          <div class="meta">
+            <h3>Slim Jeans</h3>
+            <div class="price">$59.00</div>
+            <div class="small">Trendy and durable</div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="thumb" style="background-image:url('https://images.unsplash.com/photo-1541099649105-f69ad21f3246?auto=format&fit=crop&w=600&q=60')"></div>
+          <div class="meta">
+            <h3>Leather Jacket</h3>
+            <div class="price">$129.50</div>
+            <div class="small">Classic fashion statement</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel">
+        <h2>Upcoming Sale Offers</h2>
+        <p style="font-size:13px;color:#6b7280">Plan your purchases — attractive discounts and bundles coming soon.</p>
+        <table>
+          <thead><tr><th>Offer</th><th>Discount</th><th>Period</th></tr></thead>
+          <tbody>
+            <tr><td>Summer Flash Sale</td><td>30% off select dresses</td><td>Oct 10 — Oct 14, 2025</td></tr>
+            <tr><td>Buy 2 Get 1</td><td>On selected tees</td><td>Nov 1 — Nov 7, 2025</td></tr>
+            <tr><td>Member Exclusive</td><td>Extra 10% for members</td><td>Dec 1 — Dec 31, 2025</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="panel">
+        <h2>Why shop with Fashion Store?</h2>
+        <ul style="margin-top:8px;line-height:1.6">
+          <li><strong>Quality Guarantee:</strong> Curated pieces from trusted suppliers.</li>
+          <li><strong>Free Shipping:</strong> On orders over $60.</li>
+          <li><strong>Secure Checkout:</strong> SSL & modern payment gateways.</li>
+          <li><strong>Easy Returns:</strong> 30-day hassle-free returns.</li>
+        </ul>
+      </div>
+    </main>
+
+    <footer>&copy; <span id="year"></span> Fashion Store. All rights reserved.</footer>
+  </div>
+
+  <script>
+    document.getElementById('year').innerText = new Date().getFullYear();
+  </script>
+</body>
+</html>
